@@ -12,18 +12,24 @@ for (var i = 0; i < wdi_17_names.length; i++) {
 }
 */
 
-function namePicker(){
-    var i = 0;
+function namePicker() {
+
     var pick = Math.floor(Math.random() * wdi_17_names.length);
 
-    var currentName;
-    currentName = wdi_17_names[pick];
-
+    var currentName = wdi_17_names[pick];
+    document.getElementById("name").innerHTML = wdi_17_names[pick];
+    console.log(pick);
     console.log(currentName);
+    document.body.style.backgroundColor = getRandomColor();
+    document.getElementById("name").style.color = getRandomColor();
 
-
-    var x = document.getElementById("name");
-    var t = document.createTextNode(currentName);
-    //document.write.(currentName);
 }
+
+function getRandomColor () {
+    var hex = Math.floor(Math.random() * 0xFFFFFF);
+    return "#" + ("000000" + hex.toString(16)).substr(-6);
+
+    console.log(currentBkgColor);
+}
+
 namePicker();
