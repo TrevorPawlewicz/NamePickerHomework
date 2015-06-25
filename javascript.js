@@ -5,13 +5,6 @@ var wdi_17_names = ["Addison", "Ben", "Christine",
     "Jonathan", "Pericles", "Peter", "Philippe", "Sergio",
     "Simon", "Tali", "Tavo", "Trevor"];
 
-
-/*
-for (var i = 0; i < wdi_17_names.length; i++) {
-    console.log(wdi_17_names[i]);
-}
-*/
-
 function namePicker() {
 
     var pick = Math.floor(Math.random() * wdi_17_names.length);
@@ -31,5 +24,6 @@ function getRandomColor () {
 
     console.log(currentBkgColor);
 }
+
 
 namePicker();
